@@ -27,7 +27,7 @@ function validate(body) {
   }
   const e = email.trim().toLowerCase();
   if (!EMAIL_RE.test(e) || e.length > 254) return { error: "Correo inválido" };
-  if (password.length < 6 || password.length > 72) {
+  if (password.length < 8 || password.length > 72) {
     return { error: "La contraseña debe tener entre 8 y 72 caracteres" };
   }
   return { email: e, password };
